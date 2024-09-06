@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+
+    font-family: "Montserrat", sans-serif;
+    color: white
+}
+
+header {
+    height: 15vh;
+    width: 100%;
+    position: fixed;
+
+}
+
+.cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: #96c11ef6;
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+    /* Make sure it doesn't block interaction */
+
+}
+
+.bigcursor {
+    height: 300px;
+    width: 300px;
+    border-radius: 100px;
+    background-color: #96c11e2e;
+    position: fixed;
+    z-index: 9;
+    filter: blur(50px);
+
+}
+
+#navlist {
+    height: 15vh;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 50;
+    box-sizing: border-box;
+}
+
+#navlist ul {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3vw;
+    padding: 0px 90px;
+
+}
+
+
+#navlist img {
+    height: 100px;
+    width: 100px;
+    margin: -3px -4px;
+}
+
+#navlist li {
+    list-style: none;
+    line-height: 1;
+}
+
+#navlist a {
+
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+    opacity: .8;
+
+}
+
+main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.159);
+    z-index: -1;
+
+}
+
+main .page1 {
+    position: relative;
+    top: 72px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+/* .page1 .heading h1::before {
+    content: "eat. drink. play.";
+    color: black;
+    position: absolute;
+    top: 36.2vh;
+    left: 13.5vw; 
+    z-index: -1;
+  }  */
+.page1 .heading h1::before {
+    content: "eat. drink. play.";
+    position: absolute;
+    top: -0.5vh;
+    left: -0.2vw;
+    /* transform: translate(-0.3%, -2%); */
+    /* we can also use this prop */
+    z-index: -1;
+    font-size: inherit;
+    -webkit-text-stroke: 1px #95c11e;
+    color: black;
+    /* Match the font size of the h1 */
+}
+
+.page1 .heading {
+    position: relative;
+    display: flex;
+    gap: 5vw;
+    font-size: 5vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    z-index: -1;
+}
+
+.page1 .para {
+    margin-top: -10px;
+    z-index: -1;
+}
+
+.page1 .para h4 {
+    font-size: 3.5vw;
+    font-weight: 100;
+    margin-bottom: 10px;
+
+}
+
+.page1 .para p {
+    text-align: center;
+    font-size: 15px;
+    margin: 1px 27vw;
+
+}
+
+.page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+
+/* .page2 marquee {
+    font-size: 120px;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* background-color: red; */
+/* -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #95c11e; */
+
+/* }  */
+
+/* there is another way incase of marquee tag with by use of animation */
+
+
+.page2 .scrolling-text {
+    width: 100%;
+    white-space: nowrap;
+    /* display: flex;
+    justify-content: flex-start; */
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: inherit;
+
+}
+
+
+.scrolling-text::-webkit-scrollbar {
+    display: none
+}
+
+.scroller-text-1 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+
+
+.scrolling-text h1 {
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: gillroy;
+    font-size: 110px;
+    font-weight: 900;
+    /* color: transparent; */
+    -webkit-text-stroke: 2px #95c11e;
+    margin: 21px;
+    transition: all linear 0.5s;
+
+}
+
+.scroller-text-1 h1:hover {
+    background-color: #95c11e;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.page2 .about-us {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 58px 29px;
+    position: relative;
+    z-index: 10;
+}
+
+.page2 .about-us img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    /* border: 2px solid red; */
+    object-fit: cover;
+}
+
+.page2 .about {
+    text-align: center;
+    width: 50vw;
+    margin: -20px -24px;
+}
+
+.page2 .about-us h4 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 40px 1px;
+    font-weight: 700;
+}
+
+.page2 .about-us p {
+    font: 20px "Montserrat, sans-serif";
+    margin: 20px 4vw;
+    line-height: 25px;
+
+}
+
+.page2 .otherimg {
+    /* background-color: red; */
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    gap: 3vw;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.page2 .otherimg .img {
+    height: 65%;
+    /* background-color: blue; */
+    width: 20%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    /* padding: 5px 5px */
+    transition: all ease 0.5s;
+}
+
+.otherimg .overlay {
+    background-color: #95c11e;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    color: black;
+    opacity: 0;
+    padding: 19px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all ease 0.5s;
+    /* Smooth transition */
+    position: absolute;
+    /* Ensures the overlay stays within the img */
+    top: 0;
+    left: 0;
+
+}
+
+.otherimg .overlay h4 {
+    font-size: 2vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.otherimg .overlay p {
+    font-size: 15px;
+    padding: 4px 4px;
+    width: 80%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.otherimg:hover .overlay {
+    opacity: 1;
+}
+
+.img:hover {
+    transform: rotate3d(1, 1, 0, 20deg);
+}
+
+.page2 .otherimg #img1 {
+    background-image: url("top-tracker.jpg");
+
+}
+
+#img2 {
+    background-image: url("golf\ lesson.jpg");
+    background-size: cover;
+
+}
+
+#img3 {
+    background-image: url("golf\ caffee.jpeg");
+    background-size: cover;
+}
+
+.greenpage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25vh;
+    overflow: hidden;
+    background: linear-gradient(to left bottom, #119F3A, #ACE022);
+}
+
+.greenpage img {
+    height: 70vh;
+    width: 300px;
+    /* object-fit: ; */
+    margin: 1px -4vw;
+
+}
+
+.greenpage h5 {
+    text-transform: capitalize;
+    font-size: 1.5vw;
+    padding: 1px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.page3 {
+
+    height: 70vh;
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.page3 img {
+    height: 15%;
+    width: 15%;
+    object-fit: contain;
+    position: absolute;
+}
+
+.page3 .colon1 {
+    left: 5%;
+    top: 20%;
+}
+
+.page3 .colon2 {
+    bottom: 10%;
+    right: 7%;
+}
+
+
+.page3 p {
+    margin: 6px 46px;
+    height: 54%;
+    width: 55%;
+    font-size: 2vw;
+    text-align: center;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+footer {
+    height: 35vh;
+    background: linear-gradient(to left bottom, #119F3A, #ACE022);
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    padding: 4px 42px;
+}
+
+footer img {
+    height: 15vh;
+
+}
+
+footer h3 {
+    text-transform: uppercase;
+    line-height: 40px;
+    font-size: 2.1vw;
+}
+
+footer h5 {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    line-height: 25px;
+}
